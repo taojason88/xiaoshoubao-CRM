@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cloud.modules.sys.dao.SysMenuDao">
+
+	<select id="queryNotButtonList" resultType="com.cloud.modules.sys.entity.SysMenuEntity">
+		SELECT MENU_ID,PARENT_ID,menu_name,URL,PERMS,TYPE,ICON,sort FROM sys_menu WHERE TYPE != 2 ORDER BY sort ASC
+	</select>
+
+	<select id="queryList" resultType="com.cloud.modules.sys.entity.SysMenuEntity">
+		SELECT A.*,B.menu_name PARENT_NAME FROM sys_menu A LEFT JOIN sys_menu B ON A.PARENT_ID = B.MENU_ID ORDER BY A.MENU_ID,A.sort
+	</select>
+
+	<!--查询所有-->
+	<select id="selectAll" resultType="com.cloud.modules.sys.entity.SysMenuEntity">
+		SELECT A.*,B.menu_name PARENT_NAME FROM sys_menu A LEFT JOIN sys_menu B ON A.PARENT_ID = B.MENU_ID ORDER BY A.MENU_ID,A.sort
+	</select>
+
+    <select id="queryMaxIdByParentId" resultType="string">
+		SELECT MAX(MENU_ID) FROM sys_menu WHERE PARENT_ID = #{parentId}
+	</select>
+</mapper>

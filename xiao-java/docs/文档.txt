@@ -1,0 +1,14 @@
+线索列表
+http://localhost:8888/api/leads/list?page=1&limi
+
+
+//更新数据
+http://localhost:8888/api/leads/update
+{
+	"mobile" : "15722926461",
+	"leadsId" : "1",
+	"leadsName" : "孙烽翔的小程序",
+	"createUserId" : "10",
+	"batchId" : "100"
+}
+
