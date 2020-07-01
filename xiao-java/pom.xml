@@ -23,7 +23,7 @@
         <commons.configuration.version>1.10</commons.configuration.version>
         <velocity-version>1.7</velocity-version>
         <velocity-tools-version>2.0</velocity-tools-version>
-        <quartz.version>2.3.0</quartz.version>
+        <quartz.version>2.3.2</quartz.version>
         <logstash.version>5.1</logstash.version>
         <logback.version>1.2.3</logback.version>
         <qiniu.version>[7.2.0, 7.2.99]</qiniu.version>
