@@ -17,7 +17,7 @@
     <properties>
         <java.version>1.8</java.version>
         <lombok.version>1.18.4</lombok.version>
-        <mysql.version>8.0.13</mysql.version>
+        <mysql.version>8.0.16</mysql.version>
         <commons.io.version>2.5</commons.io.version>
         <joda.time.version>2.9.9</joda.time.version>
         <commons.configuration.version>1.10</commons.configuration.version>
